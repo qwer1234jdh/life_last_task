@@ -67,6 +67,14 @@
     height: 28px;
 }
 
+/* Per-card distinct icon accent colors */
+.strength-card:nth-child(1) .strength-card__icon { background: rgba(30, 64, 175, 0.14); border-color: rgba(30, 64, 175, 0.35); color: #60A5FA; }
+.strength-card:nth-child(2) .strength-card__icon { background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.3); color: var(--accent); }
+.strength-card:nth-child(3) .strength-card__icon { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3); color: #34D399; }
+.strength-card:nth-child(4) .strength-card__icon { background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.3); color: #A78BFA; }
+.strength-card:nth-child(5) .strength-card__icon { background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.3); color: #FCD34D; }
+.strength-card:nth-child(6) .strength-card__icon { background: rgba(239, 68, 68, 0.12); border-color: rgba(239, 68, 68, 0.3); color: #FCA5A5; }
+
 /* Text */
 .strength-card__title {
     font-size: 1.0625rem;

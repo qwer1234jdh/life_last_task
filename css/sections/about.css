@@ -2,6 +2,79 @@
    ABOUT SECTION (학과 소개)
 ======================================== */
 
+/* Two-column intro */
+.about__intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+.about__intro-text .section-tag { display: inline-block; margin-bottom: 16px; }
+.about__intro-text .section-title { text-align: left; margin-bottom: 20px; }
+
+.about__intro-p {
+    font-size: 1rem;
+    color: var(--text-400);
+    line-height: 1.85;
+    margin-bottom: 14px;
+}
+.about__intro-p:last-child { margin-bottom: 0; }
+
+.about__visual-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.about__visual-stat {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color var(--t-base), transform var(--t-base);
+}
+
+.about__visual-stat:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+}
+
+.about__visual-num {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.about__visual-label {
+    font-size: 0.8125rem;
+    color: var(--text-600);
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .about__intro {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about__visual-panel {
+        gap: 10px;
+    }
+    .about__visual-stat {
+        padding: 20px 16px;
+    }
+}
+
 /* Dean's message */
 .about__dean {
     display: grid;
