@@ -59,6 +59,7 @@
     background: rgba(6, 182, 212, 0.15);
     border-color: rgba(6, 182, 212, 0.45);
     color: var(--accent-light);
+    box-shadow: 0 0 16px rgba(6, 182, 212, 0.2);
 }
 
 .strength-card__icon svg {
@@ -86,18 +87,32 @@
 /* ========================================
    RESPONSIVE
 ======================================== */
+/* Tablet: 3 → 2 columns */
 @media (max-width: 1023px) {
     .strengths__grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Mobile: 2 → 1 column */
 @media (max-width: 560px) {
     .strengths__grid {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .strength-card {
-        padding: 24px 20px;
+        padding: 22px 18px;
+    }
+
+    .strength-card__icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+    }
+
+    .strength-card__icon svg {
+        width: 24px;
+        height: 24px;
     }
 }
