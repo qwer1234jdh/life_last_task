@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/sections/about.css">
     <link rel="stylesheet" href="css/sections/strengths.css">
     <link rel="stylesheet" href="css/sections/curriculum.css">
+    <link rel="stylesheet" href="css/sections/careers.css">
     <link rel="stylesheet" href="css/sections/projects.css">
     <link rel="stylesheet" href="css/sections/faq.css">
 </head>
@@ -407,18 +408,133 @@
 
 
         <!-- ================================================
-             SECTION 6 — CAREERS  (Team B 작업 예정)
+             SECTION 6 — CAREERS
         ================================================ -->
         <section id="careers" class="section">
             <div class="container">
                 <div class="section-header reveal">
                     <span class="section-tag">Careers</span>
                     <h2 class="section-title">졸업 후 진로</h2>
-                    <p class="section-desc">팀원 B 작업 예정 영역</p>
+                    <p class="section-desc">전자공학 전문 지식으로 임베디드부터 AI 하드웨어까지 다양한 분야에서 활약합니다</p>
                 </div>
-                <div class="placeholder-block reveal">
-                    취업 분야, 대표 기업, 대학원 진학 정보가 들어올 예정입니다.
+
+                <!-- 주요 통계 -->
+                <div class="careers__stats reveal">
+                    <div class="careers__stat-item">
+                        <span class="careers__stat-num">98%</span>
+                        <span class="careers__stat-label">취업률</span>
+                    </div>
+                    <div class="careers__stat-divider" aria-hidden="true"></div>
+                    <div class="careers__stat-item">
+                        <span class="careers__stat-num">3,800만+</span>
+                        <span class="careers__stat-label">평균 초봉</span>
+                    </div>
+                    <div class="careers__stat-divider" aria-hidden="true"></div>
+                    <div class="careers__stat-item">
+                        <span class="careers__stat-num">25%</span>
+                        <span class="careers__stat-label">대학원 진학률</span>
+                    </div>
+                    <div class="careers__stat-divider" aria-hidden="true"></div>
+                    <div class="careers__stat-item">
+                        <span class="careers__stat-num">8%</span>
+                        <span class="careers__stat-label">해외 취업</span>
+                    </div>
                 </div>
+
+                <!-- 진로 트랙 카드 -->
+                <div class="careers__grid">
+
+                    <div class="career-card reveal reveal-delay-1">
+                        <div class="career-card__icon" aria-hidden="true">🔧</div>
+                        <h3 class="career-card__title">임베디드 시스템 엔지니어</h3>
+                        <p class="career-card__desc">MCU·MPU 기반 펌웨어 개발부터 RTOS 포팅, 디바이스 드라이버 설계까지 하드웨어와 소프트웨어를 잇는 핵심 직군</p>
+                        <div class="career-card__tags">
+                            <span class="career-tag">C/C++</span>
+                            <span class="career-tag">RTOS</span>
+                            <span class="career-tag">ARM Cortex</span>
+                            <span class="career-tag">UART/SPI/I2C</span>
+                        </div>
+                    </div>
+
+                    <div class="career-card reveal reveal-delay-2">
+                        <div class="career-card__icon" aria-hidden="true">💾</div>
+                        <h3 class="career-card__title">반도체 설계·공정 엔지니어</h3>
+                        <p class="career-card__desc">VLSI 회로 설계, 공정 개발, 수율 향상 등 반도체 산업 최전선에서 활약. 삼성전자·SK하이닉스·DB하이텍 등 주요 기업 취업</p>
+                        <div class="career-card__tags">
+                            <span class="career-tag">Verilog/VHDL</span>
+                            <span class="career-tag">CMOS</span>
+                            <span class="career-tag">EDA 툴</span>
+                            <span class="career-tag">공정 설계</span>
+                        </div>
+                    </div>
+
+                    <div class="career-card reveal reveal-delay-3">
+                        <div class="career-card__icon" aria-hidden="true">📡</div>
+                        <h3 class="career-card__title">IoT·스마트 디바이스 개발자</h3>
+                        <p class="career-card__desc">센서 인터페이스, BLE·Wi-Fi 통신, 저전력 설계를 아우르는 IoT 기기 전반을 설계·개발. 스타트업부터 대기업까지 수요 급증</p>
+                        <div class="career-card__tags">
+                            <span class="career-tag">BLE/Zigbee</span>
+                            <span class="career-tag">MQTT</span>
+                            <span class="career-tag">저전력 설계</span>
+                            <span class="career-tag">PCB 설계</span>
+                        </div>
+                    </div>
+
+                    <div class="career-card reveal reveal-delay-4">
+                        <div class="career-card__icon" aria-hidden="true">🧠</div>
+                        <h3 class="career-card__title">AI 하드웨어 연구원</h3>
+                        <p class="career-card__desc">NPU·GPU 아키텍처 설계, 엣지 AI 추론 최적화, 뉴로모픽 칩 개발 등 AI와 하드웨어가 융합된 차세대 연구 분야</p>
+                        <div class="career-card__tags">
+                            <span class="career-tag">FPGA</span>
+                            <span class="career-tag">신경망 가속</span>
+                            <span class="career-tag">양자화</span>
+                            <span class="career-tag">SoC 설계</span>
+                        </div>
+                    </div>
+
+                    <div class="career-card reveal reveal-delay-5">
+                        <div class="career-card__icon" aria-hidden="true">📶</div>
+                        <h3 class="career-card__title">통신 시스템 엔지니어</h3>
+                        <p class="career-card__desc">5G/6G 기지국 개발, 모뎀 설계, RF 회로 최적화 등 초연결 사회를 이끄는 무선 통신 인프라 구축 담당</p>
+                        <div class="career-card__tags">
+                            <span class="career-tag">5G NR</span>
+                            <span class="career-tag">RF 설계</span>
+                            <span class="career-tag">신호 처리</span>
+                            <span class="career-tag">안테나</span>
+                        </div>
+                    </div>
+
+                    <div class="career-card reveal reveal-delay-6">
+                        <div class="career-card__icon" aria-hidden="true">🎓</div>
+                        <h3 class="career-card__title">대학원 진학 / 연구직</h3>
+                        <p class="career-card__desc">KAIST·POSTECH·연세대 등 국내외 명문 대학원 진학 후 반도체·임베디드·AI 분야 연구원, 교수 등 전문 연구직으로 성장</p>
+                        <div class="career-card__tags">
+                            <span class="career-tag">석·박사 과정</span>
+                            <span class="career-tag">연구 논문</span>
+                            <span class="career-tag">정부출연연구소</span>
+                            <span class="career-tag">기업 연구소</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 주요 취업 기업 -->
+                <div class="careers__companies reveal">
+                    <p class="careers__companies-title">주요 취업 기업</p>
+                    <div class="careers__companies-grid">
+                        <span class="company-badge">삼성전자</span>
+                        <span class="company-badge">SK하이닉스</span>
+                        <span class="company-badge">LG전자</span>
+                        <span class="company-badge">현대자동차</span>
+                        <span class="company-badge">퀄컴코리아</span>
+                        <span class="company-badge">한화시스템</span>
+                        <span class="company-badge">KT</span>
+                        <span class="company-badge">NAVER</span>
+                        <span class="company-badge">DB하이텍</span>
+                        <span class="company-badge">LG이노텍</span>
+                    </div>
+                </div>
+
             </div>
         </section>
 
