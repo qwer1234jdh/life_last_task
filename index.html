@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="임베디드부터 AI 하드웨어까지, 미래를 만드는 전자공학과">
+    <title>전자공학과 — 회로를 넘어 세상을 설계하다</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sections/hero.css">
+    <link rel="stylesheet" href="css/sections/about.css">
+    <link rel="stylesheet" href="css/sections/strengths.css">
+    <link rel="stylesheet" href="css/sections/curriculum.css">
+    <link rel="stylesheet" href="css/sections/projects.css">
+    <link rel="stylesheet" href="css/sections/faq.css">
+</head>
+<body>
+
+    <!-- ================================================
+         HEADER / NAVIGATION  (Team A)
+    ================================================ -->
+    <header id="header">
+        <nav class="nav container">
+            <a href="#hero" class="nav__logo">
+                <span class="nav__logo-icon">⚡</span>
+                <span>전자공학과</span>
+            </a>
+
+            <ul class="nav__menu" id="navMenu" role="list">
+                <li><a href="#about"      class="nav__link">학과 소개</a></li>
+                <li><a href="#strengths"  class="nav__link">학과 강점</a></li>
+                <li><a href="#curriculum" class="nav__link">교육과정</a></li>
+                <li><a href="#projects"   class="nav__link">학생 프로젝트</a></li>
+                <li><a href="#careers"    class="nav__link">졸업 후 진로</a></li>
+                <li><a href="#faq"        class="nav__link">FAQ</a></li>
+                <li><a href="#contact"    class="nav__link nav__link--cta">입학 문의</a></li>
+            </ul>
+
+            <button
+                class="nav__hamburger"
+                id="hamburger"
+                aria-label="메뉴 열기"
+                aria-expanded="false"
+                aria-controls="navMenu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ================================================
+             SECTION 1 — HERO  (Team A)
+        ================================================ -->
+        <section id="hero" class="hero">
+            <div class="hero__bg" aria-hidden="true">
+                <div class="hero__grid"></div>
+                <div class="hero__glow hero__glow--1"></div>
+                <div class="hero__glow hero__glow--2"></div>
+            </div>
+
+            <div class="hero__content container">
+                <p class="hero__badge">Department of Electronic Engineering</p>
+
+                <h1 class="hero__title">
+                    회로를 넘어<br>
+                    <span class="hero__title-accent">세상을 설계하다</span>
+                </h1>
+
+                <p class="hero__sub">
+                    임베디드부터 AI 하드웨어까지<br>
+                    미래를 만드는 전자공학
+                </p>
+
+                <div class="hero__actions">
+                    <a href="#about"   class="btn btn--primary">학과 소개 보기</a>
+                    <a href="#contact" class="btn btn--outline">입학 문의</a>
+                </div>
+
+                <div class="hero__stats" aria-label="학과 주요 지표">
+                    <div class="hero__stat">
+                        <div class="hero__stat-value">
+                            <span class="hero__count" data-target="98" data-suffix="">98</span><span class="hero__stat-unit">%</span>
+                        </div>
+                        <span class="hero__stat-label">취업률</span>
+                    </div>
+                    <div class="hero__stat-divider" aria-hidden="true"></div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-value">
+                            <span class="hero__count" data-target="2400" data-suffix="">2,400</span><span class="hero__stat-unit">+</span>
+                        </div>
+                        <span class="hero__stat-label">졸업생</span>
+                    </div>
+                    <div class="hero__stat-divider" aria-hidden="true"></div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-value">
+                            <span class="hero__count" data-target="40" data-suffix="">40</span><span class="hero__stat-unit">+</span>
+                        </div>
+                        <span class="hero__stat-label">산학협력 기업</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="hero__scroll" aria-label="아래 섹션으로 이동">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <polyline points="19 12 12 19 5 12"/>
+                </svg>
+            </a>
+        </section>
+
+
+        <!-- ================================================
+             SECTION 2 — ABOUT (학과 소개)  (Team A)
+        ================================================ -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">About Us</span>
+                    <h2 class="section-title">학과 소개</h2>
+                    <p class="section-desc">전자공학의 무한한 가능성으로 세상을 변화시킵니다</p>
+                </div>
+
+                <!-- 학과장 인사말 -->
+                <div class="about__dean reveal">
+                    <div class="about__dean-img">
+                        <div class="about__dean-avatar" aria-label="학과장 사진">
+                            <svg viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                                <circle cx="40" cy="28" r="18" fill="#1E40AF" opacity="0.5"/>
+                                <ellipse cx="40" cy="68" rx="26" ry="16" fill="#1E40AF" opacity="0.35"/>
+                                <circle cx="40" cy="28" r="18" stroke="#06B6D4" stroke-width="1.5" opacity="0.4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="about__dean-text">
+                        <blockquote class="about__dean-quote">
+                            "전자공학은 단순한 회로 설계를 넘어, 미래 사회를 이끌어 갈 핵심 기술의 원천입니다.
+                            우리 학과는 이론과 실습이 조화를 이루는 교육을 통해, 학생 여러분이 글로벌 무대에서
+                            활약할 수 있는 창의적 공학인으로 성장하도록 최선을 다하겠습니다."
+                        </blockquote>
+                        <cite class="about__dean-cite">
+                            <strong>홍길동 교수</strong>
+                            <span>전자공학과 학과장</span>
+                        </cite>
+                    </div>
+                </div>
+
+                <!-- 비전 / 미션 / 핵심 가치 -->
+                <div class="about__cards">
+                    <div class="about__card about__card--vision reveal reveal-delay-1">
+                        <div class="about__card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="10" stroke="#06B6D4" stroke-width="2.5"/>
+                                <path d="M24 4v5M24 39v5M4 24h5M39 24h5" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M10.1 10.1l3.5 3.5M34.4 34.4l3.5 3.5M10.1 37.9l3.5-3.5M34.4 13.6l3.5-3.5" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="about__card-title">비전 (Vision)</h3>
+                        <p class="about__card-text">
+                            전자·반도체·AI 분야의 글로벌 핵심 인재를 양성하는 선도적 공과대학으로 도약
+                        </p>
+                    </div>
+
+                    <div class="about__card about__card--mission reveal reveal-delay-2">
+                        <div class="about__card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="M24 6L6 18v26h10V32h16v12h10V18L24 6z" stroke="#1E40AF" stroke-width="2.5" stroke-linejoin="round"/>
+                                <circle cx="24" cy="21" r="4" stroke="#22D3EE" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="about__card-title">미션 (Mission)</h3>
+                        <p class="about__card-text">
+                            창의적 사고와 실전 역량을 겸비한 공학인 육성, 산학협력 강화, 사회 기여를 통한 지속 가능한 발전
+                        </p>
+                    </div>
+
+                    <div class="about__card about__card--value reveal reveal-delay-3">
+                        <div class="about__card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <polygon points="24,4 29,17 43,17 32,26 36,40 24,32 12,40 16,26 5,17 19,17"
+                                         stroke="#06B6D4" stroke-width="2.5" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="about__card-title">핵심 가치</h3>
+                        <p class="about__card-text">
+                            혁신(Innovation) · 융합(Convergence) · 협력(Collaboration) · 책임(Responsibility)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================================================
+             SECTION 3 — STRENGTHS (학과 강점)  (Team A)
+        ================================================ -->
+        <section id="strengths" class="strengths section section--alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Why Choose Us</span>
+                    <h2 class="section-title">학과 강점</h2>
+                    <p class="section-desc">최고의 환경에서 최고의 공학인으로 성장하세요</p>
+                </div>
+
+                <div class="strengths__grid">
+
+                    <div class="strength-card reveal reveal-delay-1">
+                        <div class="strength-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <rect x="6" y="18" width="36" height="22" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                                <path d="M16 18v-5a8 8 0 0116 0v5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="24" cy="29" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 33v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="strength-card__title">최첨단 실험·실습</h3>
+                        <p class="strength-card__desc">
+                            반도체 클린룸, PCB 제작실, RF 측정 장비 등 산업 현장 수준의 실험 시설 완비
+                        </p>
+                    </div>
+
+                    <div class="strength-card reveal reveal-delay-2">
+                        <div class="strength-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="M6 36l12-12 8 8 16-20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30 8h10v10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="strength-card__title">높은 취업률</h3>
+                        <p class="strength-card__desc">
+                            삼성전자, SK하이닉스, LG전자 등 국내외 주요 기업 취업률 98%, 대학원 진학률 25%
+                        </p>
+                    </div>
+
+                    <div class="strength-card reveal reveal-delay-3">
+                        <div class="strength-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <circle cx="15" cy="16" r="8" stroke="currentColor" stroke-width="2.5"/>
+                                <circle cx="33" cy="32" r="8" stroke="currentColor" stroke-width="2.5"/>
+                                <path d="M21 17h5c3.31 0 6 2.69 6 6v3" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="strength-card__title">산학협력 프로그램</h3>
+                        <p class="strength-card__desc">
+                            40개 이상 기업과 산학협력 협약, 현장 실습·인턴십·공동 R&amp;D 프로젝트 참여 기회
+                        </p>
+                    </div>
+
+                    <div class="strength-card reveal reveal-delay-4">
+                        <div class="strength-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2.5"/>
+                                <path d="M15 24l7 7 13-13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="strength-card__title">자격증 취득 지원</h3>
+                        <p class="strength-card__desc">
+                            전기기사, 정보통신기사, 반도체설계기사 등 취업 핵심 자격증 취득 전담 지도
+                        </p>
+                    </div>
+
+                    <div class="strength-card reveal reveal-delay-5">
+                        <div class="strength-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/>
+                                <path d="M24 8a16 16 0 010 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M8 24h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M11 15s4 4 13 4 13-4 13-4M11 33s4-4 13-4 13 4 13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="strength-card__title">해외 교류 프로그램</h3>
+                        <p class="strength-card__desc">
+                            MIT, 도쿄대 등 해외 유수 대학과 교환학생 및 공동 연구 프로그램 운영
+                        </p>
+                    </div>
+
+                    <div class="strength-card reveal reveal-delay-6">
+                        <div class="strength-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="2.5"/>
+                                <path d="M8 40c0-8.84 7.16-16 16-16s16 7.16 16 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M36 22l2 2-6 6-3-3 1.5-1.5L32 27l4.5-5z" fill="currentColor" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <h3 class="strength-card__title">소수 정예 멘토링</h3>
+                        <p class="strength-card__desc">
+                            교수 1인당 학생 비율 최소화, 1:1 커리어 멘토링으로 개인 맞춤형 진로 설계 지원
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================================================
+             SECTION 4 — CURRICULUM  (Team B 작업 예정)
+        ================================================ -->
+        <section id="curriculum" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Curriculum</span>
+                    <h2 class="section-title">교육과정 / 전공 트랙</h2>
+                    <p class="section-desc">팀원 B 작업 예정 영역</p>
+                </div>
+                <div class="placeholder-block reveal">
+                    Embedded · Semiconductor · AI Hardware · Communication 트랙 탭 섹션이 들어올 예정입니다.
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================================================
+             SECTION 5 — PROJECTS  (Team C 작업 예정)
+        ================================================ -->
+        <section id="projects" class="section section--alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Student Projects</span>
+                    <h2 class="section-title">학생 프로젝트</h2>
+                    <p class="section-desc">팀원 C 작업 예정 영역</p>
+                </div>
+                <div class="placeholder-block reveal">
+                    캡스톤 디자인·공모전 수상작 카드 그리드가 들어올 예정입니다.
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================================================
+             SECTION 6 — CAREERS  (Team B 작업 예정)
+        ================================================ -->
+        <section id="careers" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Careers</span>
+                    <h2 class="section-title">졸업 후 진로</h2>
+                    <p class="section-desc">팀원 B 작업 예정 영역</p>
+                </div>
+                <div class="placeholder-block reveal">
+                    취업 분야, 대표 기업, 대학원 진학 정보가 들어올 예정입니다.
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================================================
+             SECTION 7 — FAQ  (Team C 작업 예정)
+        ================================================ -->
+        <section id="faq" class="section section--alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">FAQ</span>
+                    <h2 class="section-title">자주 묻는 질문</h2>
+                    <p class="section-desc">팀원 C 작업 예정 영역</p>
+                </div>
+                <div class="placeholder-block reveal">
+                    아코디언 FAQ 섹션이 들어올 예정입니다.
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================================================
+             SECTION 8 — CONTACT
+        ================================================ -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title">문의하기</h2>
+                    <p class="section-desc">궁금한 점이 있으시면 언제든지 연락해 주세요</p>
+                </div>
+                <div class="contact__grid">
+                    <div class="contact__card reveal reveal-delay-1">
+                        <div class="contact__icon" aria-hidden="true">📍</div>
+                        <h3>오시는 길</h3>
+                        <p>공학관 3층<br>전자공학과 사무실</p>
+                    </div>
+                    <div class="contact__card reveal reveal-delay-2">
+                        <div class="contact__icon" aria-hidden="true">📞</div>
+                        <h3>전화 문의</h3>
+                        <p>02-XXX-XXXX<br>평일 09:00 – 17:00</p>
+                    </div>
+                    <div class="contact__card reveal reveal-delay-3">
+                        <div class="contact__icon" aria-hidden="true">✉️</div>
+                        <h3>이메일</h3>
+                        <p>ee@university.ac.kr</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================================================
+         FOOTER  (Team B 작업 예정)
+    ================================================ -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__logo">
+                <span aria-hidden="true">⚡</span>
+                <span>전자공학과</span>
+            </div>
+            <p class="footer__copy">© 2025 Department of Electronic Engineering. All rights reserved.</p>
+            <p class="footer__sub">푸터 상세 내용은 팀원 B 작업 예정입니다.</p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

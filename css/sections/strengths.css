@@ -1,0 +1,103 @@
+/* ========================================
+   STRENGTHS SECTION (학과 강점)
+======================================== */
+.strengths__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.strength-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 32px 28px;
+    transition: border-color var(--t-base), transform var(--t-base), box-shadow var(--t-base);
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+/* Subtle top-left corner accent on hover */
+.strength-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.12), transparent 70%);
+    opacity: 0;
+    transition: opacity var(--t-base);
+    border-radius: var(--r-lg) 0 0 0;
+}
+
+.strength-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.strength-card:hover::before { opacity: 1; }
+
+/* Icon */
+.strength-card__icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.18);
+    border-radius: var(--r-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--accent);
+    transition: background var(--t-base), border-color var(--t-base), color var(--t-base);
+}
+
+.strength-card:hover .strength-card__icon {
+    background: rgba(6, 182, 212, 0.15);
+    border-color: rgba(6, 182, 212, 0.45);
+    color: var(--accent-light);
+}
+
+.strength-card__icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Text */
+.strength-card__title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--text-100);
+    margin-bottom: 10px;
+    transition: color var(--t-fast);
+}
+
+.strength-card:hover .strength-card__title { color: var(--accent-light); }
+
+.strength-card__desc {
+    font-size: 0.9rem;
+    color: var(--text-400);
+    line-height: 1.75;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 1023px) {
+    .strengths__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .strengths__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .strength-card {
+        padding: 24px 20px;
+    }
+}
