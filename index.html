@@ -72,45 +72,208 @@
             </div>
 
             <div class="hero__content container">
-                <p class="hero__badge">Department of Electronic Engineering</p>
+                <div class="hero__split">
 
-                <h1 class="hero__title">
-                    회로를 넘어<br>
-                    <span class="hero__title-accent">세상을 설계하다</span>
-                </h1>
+                    <!-- Text column -->
+                    <div class="hero__text">
+                        <p class="hero__badge">Department of Electronic Engineering</p>
 
-                <p class="hero__sub">
-                    임베디드부터 AI 하드웨어까지<br>
-                    미래를 만드는 전자공학
-                </p>
+                        <h1 class="hero__title">
+                            회로를 넘어<br>
+                            <span class="hero__title-accent">세상을 설계하다</span>
+                        </h1>
 
-                <div class="hero__actions">
-                    <a href="#about"   class="btn btn--primary">학과 소개 보기</a>
-                    <a href="#contact" class="btn btn--outline">입학 문의</a>
-                </div>
+                        <p class="hero__sub">
+                            임베디드부터 AI 하드웨어까지<br>
+                            미래를 만드는 전자공학
+                        </p>
 
-                <div class="hero__stats" aria-label="학과 주요 지표">
-                    <div class="hero__stat">
-                        <div class="hero__stat-value">
-                            <span class="hero__count" data-target="98" data-suffix="">98</span><span class="hero__stat-unit">%</span>
+                        <div class="hero__actions">
+                            <a href="#about"   class="btn btn--primary">학과 소개 보기</a>
+                            <a href="#contact" class="btn btn--outline">입학 문의</a>
                         </div>
-                        <span class="hero__stat-label">취업률</span>
-                    </div>
-                    <div class="hero__stat-divider" aria-hidden="true"></div>
-                    <div class="hero__stat">
-                        <div class="hero__stat-value">
-                            <span class="hero__count" data-target="2400" data-suffix="">2,400</span><span class="hero__stat-unit">+</span>
+
+                        <div class="hero__stats" aria-label="학과 주요 지표">
+                            <div class="hero__stat">
+                                <div class="hero__stat-value">
+                                    <span class="hero__count" data-target="98" data-suffix="">98</span><span class="hero__stat-unit">%</span>
+                                </div>
+                                <span class="hero__stat-label">취업률</span>
+                            </div>
+                            <div class="hero__stat-divider" aria-hidden="true"></div>
+                            <div class="hero__stat">
+                                <div class="hero__stat-value">
+                                    <span class="hero__count" data-target="2400" data-suffix="">2,400</span><span class="hero__stat-unit">+</span>
+                                </div>
+                                <span class="hero__stat-label">졸업생</span>
+                            </div>
+                            <div class="hero__stat-divider" aria-hidden="true"></div>
+                            <div class="hero__stat">
+                                <div class="hero__stat-value">
+                                    <span class="hero__count" data-target="40" data-suffix="">40</span><span class="hero__stat-unit">+</span>
+                                </div>
+                                <span class="hero__stat-label">산학협력 기업</span>
+                            </div>
                         </div>
-                        <span class="hero__stat-label">졸업생</span>
-                    </div>
-                    <div class="hero__stat-divider" aria-hidden="true"></div>
-                    <div class="hero__stat">
-                        <div class="hero__stat-value">
-                            <span class="hero__count" data-target="40" data-suffix="">40</span><span class="hero__stat-unit">+</span>
-                        </div>
-                        <span class="hero__stat-label">산학협력 기업</span>
-                    </div>
-                </div>
+                    </div><!-- /.hero__text -->
+
+                    <!-- 3D Chip visual column -->
+                    <div class="hero__visual" aria-hidden="true">
+                        <svg class="chip-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="f-glow-sm" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="2.5" result="b"/>
+                                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                </filter>
+                                <filter id="f-glow-md" x="-80%" y="-80%" width="260%" height="260%">
+                                    <feGaussianBlur stdDeviation="5" result="b"/>
+                                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                </filter>
+                                <filter id="f-glow-lg" x="-120%" y="-120%" width="340%" height="340%">
+                                    <feGaussianBlur stdDeviation="9" result="b"/>
+                                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                </filter>
+                                <radialGradient id="rg-top" cx="35%" cy="25%" r="65%">
+                                    <stop offset="0%" stop-color="rgba(6,182,212,0.14)"/>
+                                    <stop offset="100%" stop-color="rgba(6,182,212,0)"/>
+                                </radialGradient>
+                                <radialGradient id="rg-shadow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="rgba(6,182,212,0.1)"/>
+                                    <stop offset="100%" stop-color="rgba(6,182,212,0)"/>
+                                </radialGradient>
+                            </defs>
+
+                            <!-- Ground shadow -->
+                            <ellipse cx="250" cy="348" rx="135" ry="15" fill="url(#rg-shadow)"/>
+
+                            <!-- Side faces -->
+                            <path d="M110,210 L250,300 L250,332 L110,242 Z" fill="#101f36" stroke="rgba(30,64,175,0.45)" stroke-width="1"/>
+                            <path d="M390,210 L250,300 L250,332 L390,242 Z" fill="#152840" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
+                            <path d="M110,242 L250,332 L390,242" fill="none" stroke="rgba(6,182,212,0.12)" stroke-width="1.5"/>
+
+                            <!-- Top face -->
+                            <path d="M110,210 L250,120 L390,210 L250,300 Z" fill="#1a2d45" stroke="rgba(6,182,212,0.65)" stroke-width="1.5"/>
+                            <path d="M110,210 L250,120 L390,210 L250,300 Z" fill="url(#rg-top)" pointer-events="none"/>
+
+                            <!-- PCB trace grid (quarter lines) -->
+                            <line x1="145" y1="232" x2="285" y2="143" stroke="rgba(6,182,212,0.2)" stroke-width="0.8"/>
+                            <line x1="215" y1="278" x2="355" y2="188" stroke="rgba(6,182,212,0.2)" stroke-width="0.8"/>
+                            <line x1="145" y1="188" x2="285" y2="278" stroke="rgba(6,182,212,0.2)" stroke-width="0.8"/>
+                            <line x1="215" y1="143" x2="355" y2="233" stroke="rgba(6,182,212,0.2)" stroke-width="0.8"/>
+                            <!-- Center cross -->
+                            <line x1="180" y1="255" x2="320" y2="165" stroke="rgba(6,182,212,0.4)" stroke-width="1.2"/>
+                            <line x1="180" y1="165" x2="320" y2="255" stroke="rgba(6,182,212,0.4)" stroke-width="1.2"/>
+
+                            <!-- Animated data flows -->
+                            <line x1="180" y1="255" x2="320" y2="165" stroke="#06B6D4" stroke-width="2" stroke-dasharray="18 62" class="trace-anim" opacity="0.85" filter="url(#f-glow-sm)"/>
+                            <line x1="180" y1="165" x2="320" y2="255" stroke="#22D3EE" stroke-width="2" stroke-dasharray="18 62" class="trace-anim trace-anim--alt" opacity="0.65" filter="url(#f-glow-sm)"/>
+
+                            <!-- Via dots at intersections -->
+                            <circle cx="180" cy="210" r="3.5" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5" filter="url(#f-glow-sm)"/>
+                            <circle cx="250" cy="165" r="3.5" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5" filter="url(#f-glow-sm)"/>
+                            <circle cx="250" cy="255" r="3.5" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5" filter="url(#f-glow-sm)"/>
+                            <circle cx="320" cy="210" r="3.5" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5" filter="url(#f-glow-sm)"/>
+
+                            <!-- Processor die -->
+                            <path d="M202,210 L250,179 L298,210 L250,241 Z" fill="#0c1a2e" stroke="rgba(6,182,212,0.8)" stroke-width="2" filter="url(#f-glow-sm)"/>
+                            <!-- Die spokes -->
+                            <line x1="250" y1="210" x2="250" y2="179" stroke="rgba(6,182,212,0.35)" stroke-width="1"/>
+                            <line x1="250" y1="210" x2="298" y2="210" stroke="rgba(6,182,212,0.35)" stroke-width="1"/>
+                            <line x1="250" y1="210" x2="250" y2="241" stroke="rgba(6,182,212,0.35)" stroke-width="1"/>
+                            <line x1="250" y1="210" x2="202" y2="210" stroke="rgba(6,182,212,0.35)" stroke-width="1"/>
+                            <!-- Quadrant dots -->
+                            <circle cx="232" cy="199" r="2" fill="rgba(6,182,212,0.45)"/>
+                            <circle cx="268" cy="199" r="2" fill="rgba(6,182,212,0.45)"/>
+                            <circle cx="268" cy="221" r="2" fill="rgba(6,182,212,0.45)"/>
+                            <circle cx="232" cy="221" r="2" fill="rgba(6,182,212,0.45)"/>
+                            <!-- Inner core -->
+                            <path d="M230,210 L250,197 L270,210 L250,223 Z" fill="rgba(6,182,212,0.12)" stroke="#22D3EE" stroke-width="1.5" filter="url(#f-glow-md)"/>
+                            <!-- Core pulse -->
+                            <circle cx="250" cy="210" r="4.5" fill="#06B6D4" class="core-pulse" filter="url(#f-glow-lg)"/>
+
+                            <!-- Pins: LT edge -->
+                            <g stroke="rgba(100,200,220,0.5)" stroke-width="1.8" stroke-linecap="round">
+                                <line x1="134" y1="195" x2="124" y2="179"/>
+                                <line x1="158" y1="179" x2="148" y2="164"/>
+                                <line x1="181" y1="164" x2="171" y2="149"/>
+                                <line x1="205" y1="150" x2="195" y2="134"/>
+                                <line x1="229" y1="134" x2="219" y2="118"/>
+                            </g>
+                            <!-- Pins: TR edge -->
+                            <g stroke="rgba(100,200,220,0.5)" stroke-width="1.8" stroke-linecap="round">
+                                <line x1="274" y1="135" x2="284" y2="120"/>
+                                <line x1="298" y1="151" x2="308" y2="136"/>
+                                <line x1="322" y1="166" x2="332" y2="151"/>
+                                <line x1="345" y1="181" x2="355" y2="166"/>
+                                <line x1="369" y1="197" x2="379" y2="182"/>
+                            </g>
+                            <!-- Pins: LB edge -->
+                            <g stroke="rgba(100,200,220,0.5)" stroke-width="1.8" stroke-linecap="round">
+                                <line x1="134" y1="225" x2="124" y2="240"/>
+                                <line x1="158" y1="241" x2="148" y2="256"/>
+                                <line x1="181" y1="256" x2="171" y2="271"/>
+                                <line x1="205" y1="271" x2="195" y2="286"/>
+                                <line x1="229" y1="287" x2="219" y2="302"/>
+                            </g>
+                            <!-- Pins: RB edge -->
+                            <g stroke="rgba(100,200,220,0.5)" stroke-width="1.8" stroke-linecap="round">
+                                <line x1="366" y1="225" x2="376" y2="240"/>
+                                <line x1="342" y1="241" x2="352" y2="256"/>
+                                <line x1="319" y1="256" x2="329" y2="271"/>
+                                <line x1="295" y1="271" x2="305" y2="286"/>
+                                <line x1="271" y1="287" x2="281" y2="302"/>
+                            </g>
+
+                            <!-- Pin tip glow dots -->
+                            <g fill="rgba(6,182,212,0.55)" filter="url(#f-glow-sm)">
+                                <circle cx="124" cy="179" r="2.2"/><circle cx="148" cy="164" r="2.2"/><circle cx="171" cy="149" r="2.2"/><circle cx="195" cy="134" r="2.2"/><circle cx="219" cy="118" r="2.2"/>
+                                <circle cx="284" cy="120" r="2.2"/><circle cx="308" cy="136" r="2.2"/><circle cx="332" cy="151" r="2.2"/><circle cx="355" cy="166" r="2.2"/><circle cx="379" cy="182" r="2.2"/>
+                                <circle cx="124" cy="240" r="2.2"/><circle cx="148" cy="256" r="2.2"/><circle cx="171" cy="271" r="2.2"/><circle cx="195" cy="286" r="2.2"/><circle cx="219" cy="302" r="2.2"/>
+                                <circle cx="376" cy="240" r="2.2"/><circle cx="352" cy="256" r="2.2"/><circle cx="329" cy="271" r="2.2"/><circle cx="305" cy="286" r="2.2"/><circle cx="281" cy="302" r="2.2"/>
+                            </g>
+
+                            <!-- Corner vertex highlights -->
+                            <g filter="url(#f-glow-md)">
+                                <circle cx="110" cy="210" r="4" fill="#1E40AF" opacity="0.85"/>
+                                <circle cx="250" cy="120" r="5" fill="#06B6D4" opacity="0.9"/>
+                                <circle cx="390" cy="210" r="4" fill="#1E40AF" opacity="0.85"/>
+                                <circle cx="250" cy="300" r="4" fill="#06B6D4" opacity="0.8"/>
+                            </g>
+
+                            <!-- Floating SMD components -->
+                            <g transform="translate(55,155)" opacity="0.65">
+                                <rect x="-12" y="-7" width="10" height="14" rx="2" fill="#162032" stroke="rgba(6,182,212,0.5)" stroke-width="1"/>
+                                <rect x="2" y="-7" width="10" height="14" rx="2" fill="#162032" stroke="rgba(6,182,212,0.5)" stroke-width="1"/>
+                                <line x1="-2" y1="0" x2="2" y2="0" stroke="rgba(6,182,212,0.7)" stroke-width="1.5"/>
+                            </g>
+                            <g transform="translate(440,155) rotate(-30)" opacity="0.6">
+                                <rect x="-20" y="-9" width="40" height="18" rx="3" fill="#162032" stroke="rgba(6,182,212,0.45)" stroke-width="1"/>
+                                <line x1="-20" y1="-3" x2="-30" y2="-3" stroke="rgba(6,182,212,0.5)" stroke-width="1.2"/>
+                                <line x1="-20" y1="3" x2="-30" y2="3" stroke="rgba(6,182,212,0.5)" stroke-width="1.2"/>
+                                <line x1="20" y1="-3" x2="30" y2="-3" stroke="rgba(6,182,212,0.5)" stroke-width="1.2"/>
+                                <line x1="20" y1="3" x2="30" y2="3" stroke="rgba(6,182,212,0.5)" stroke-width="1.2"/>
+                            </g>
+                            <g transform="translate(65,315) rotate(35)" opacity="0.5">
+                                <rect x="-16" y="-5" width="32" height="10" rx="3" fill="#162032" stroke="rgba(100,180,200,0.4)" stroke-width="1"/>
+                                <line x1="-16" y1="0" x2="-24" y2="0" stroke="rgba(6,182,212,0.5)" stroke-width="1.5"/>
+                                <line x1="16" y1="0" x2="24" y2="0" stroke="rgba(6,182,212,0.5)" stroke-width="1.5"/>
+                            </g>
+
+                            <!-- Floating particles -->
+                            <circle class="flt-p p1" cx="55"  cy="195" r="2.5" fill="#06B6D4" opacity="0.45" filter="url(#f-glow-sm)"/>
+                            <circle class="flt-p p2" cx="450" cy="260" r="2"   fill="#22D3EE" opacity="0.35" filter="url(#f-glow-sm)"/>
+                            <circle class="flt-p p3" cx="75"  cy="300" r="1.8" fill="#1E40AF" opacity="0.5"  filter="url(#f-glow-sm)"/>
+                            <circle class="flt-p p4" cx="435" cy="148" r="2.8" fill="#06B6D4" opacity="0.35" filter="url(#f-glow-sm)"/>
+                            <circle class="flt-p p5" cx="170" cy="68"  r="2"   fill="#22D3EE" opacity="0.45" filter="url(#f-glow-sm)"/>
+                            <circle class="flt-p p6" cx="340" cy="65"  r="2.5" fill="#06B6D4" opacity="0.35" filter="url(#f-glow-sm)"/>
+                            <circle class="flt-p p7" cx="455" cy="335" r="1.8" fill="#1E40AF" opacity="0.4"  filter="url(#f-glow-sm)"/>
+
+                            <!-- Orbit ring -->
+                            <ellipse cx="250" cy="210" rx="182" ry="52" fill="none" stroke="rgba(6,182,212,0.07)" stroke-width="1" stroke-dasharray="6 8" transform="rotate(-33,250,210)"/>
+                        </svg>
+                    </div><!-- /.hero__visual -->
+
+                </div><!-- /.hero__split -->
             </div>
 
             <a href="#about" class="hero__scroll" aria-label="아래 섹션으로 이동">
@@ -1007,6 +1170,7 @@
     <script src="js/nav.js"></script>
     <script src="js/curriculum.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/hero-visual.js"></script>
 
 </body>
 </html>
