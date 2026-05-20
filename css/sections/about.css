@@ -165,6 +165,8 @@
 /* ========================================
    RESPONSIVE
 ======================================== */
+
+/* Tablet: dean card goes vertical */
 @media (max-width: 900px) {
     .about__dean {
         grid-template-columns: 1fr;
@@ -178,11 +180,34 @@
     }
 }
 
-@media (max-width: 767px) {
+/* Tablet: 3-col cards → 2-col to avoid overflow */
+@media (max-width: 900px) and (min-width: 560px) {
+    .about__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Third card spans full width for balanced look */
+    .about__card:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        justify-self: center;
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
     .about__cards {
         grid-template-columns: 1fr;
     }
 
+    .about__card:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+}
+
+@media (max-width: 767px) {
     .about__dean {
         padding: 28px 20px;
     }
@@ -190,5 +215,9 @@
     .about__dean-avatar {
         width: 88px;
         height: 88px;
+    }
+
+    .about__card {
+        padding: 24px 20px;
     }
 }

@@ -251,3 +251,25 @@
     .hero__glow--1 { width: 400px; height: 400px; }
     .hero__glow--2 { width: 300px; height: 300px; }
 }
+
+/* Very small screens (320px ~ 480px): wrap stats to 2-per-row */
+@media (max-width: 480px) {
+    .hero__stats {
+        flex-wrap: wrap;
+        gap: 16px 28px;
+    }
+
+    /* Hide vertical dividers when stats wrap */
+    .hero__stat-divider {
+        display: none;
+    }
+
+    .hero__stat-value {
+        font-size: 1.375rem;
+    }
+
+    .hero__badge {
+        font-size: 0.6875rem;
+        padding: 5px 12px;
+    }
+}
