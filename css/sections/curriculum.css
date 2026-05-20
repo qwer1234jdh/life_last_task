@@ -1,1 +1,298 @@
-/* 교육과정 / 전공 트랙 섹션 — 팀원 B 작업 영역 */
+/* ========================================
+   CURRICULUM SECTION — Tab UI
+======================================== */
+
+/* ---- Tab list (button row) ---- */
+.tab-list {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 36px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0;
+}
+
+.tab-list::-webkit-scrollbar { display: none; }
+
+/* ---- Tab button ---- */
+.tab-btn {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-400);
+    border-radius: var(--r-sm) var(--r-sm) 0 0;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color var(--t-fast), background var(--t-fast), border-color var(--t-fast);
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: var(--text-100);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    background: rgba(6, 182, 212, 0.06);
+}
+
+.tab-btn__icon {
+    display: flex;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.tab-btn__icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ---- Tab panel ---- */
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    animation: panelFadeIn 0.28s ease;
+}
+
+@keyframes panelFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Track header (top card inside panel) ---- */
+.track-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--r-xl);
+    padding: 36px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color var(--t-base);
+}
+
+.track-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: var(--r-xl) 0 0 var(--r-xl);
+}
+
+/* Per-track accent colors */
+.track-header--web::before      { background: linear-gradient(to bottom, #3B82F6, #06B6D4); }
+.track-header--ai::before       { background: linear-gradient(to bottom, #8B5CF6, #EC4899); }
+.track-header--data::before     { background: linear-gradient(to bottom, #F59E0B, #F97316); }
+.track-header--security::before { background: linear-gradient(to bottom, #EF4444, #F97316); }
+.track-header--cloud::before    { background: linear-gradient(to bottom, #06B6D4, #3B82F6); }
+
+/* Track icon */
+.track-hero-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--r-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.track-header--web      .track-hero-icon { background: rgba(59, 130, 246, 0.12); color: #60A5FA; }
+.track-header--ai       .track-hero-icon { background: rgba(139, 92, 246, 0.12); color: #A78BFA; }
+.track-header--data     .track-hero-icon { background: rgba(245, 158, 11, 0.12); color: #FCD34D; }
+.track-header--security .track-hero-icon { background: rgba(239, 68, 68, 0.12);  color: #FCA5A5; }
+.track-header--cloud    .track-hero-icon { background: rgba(6, 182, 212, 0.12);  color: #67E8F9; }
+
+.track-hero-icon svg { width: 34px; height: 34px; }
+
+/* Track header text */
+.track-header__text { flex: 1; }
+
+.track-header__badge {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-600);
+    margin-bottom: 8px;
+}
+
+.track-header__name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-100);
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.track-header__desc {
+    font-size: 0.9375rem;
+    color: var(--text-400);
+    line-height: 1.75;
+    margin-bottom: 16px;
+    max-width: 580px;
+}
+
+/* Tech tags */
+.track-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.track-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-300);
+    transition: background var(--t-fast), color var(--t-fast);
+}
+
+.track-tag:hover {
+    background: rgba(6, 182, 212, 0.1);
+    color: var(--accent-light);
+    border-color: rgba(6, 182, 212, 0.3);
+}
+
+/* ---- Track body (two cards: courses + careers) ---- */
+.track-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.track-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 28px 32px;
+    transition: border-color var(--t-base);
+}
+
+.track-card:hover { border-color: rgba(255, 255, 255, 0.14); }
+
+.track-card__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--text-100);
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+.track-card__title-icon { font-size: 1.1rem; }
+
+.track-card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.track-card__list li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-400);
+    line-height: 1.5;
+}
+
+.track-card__list li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 0.35em;
+    opacity: 0.7;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 900px) {
+    .track-header {
+        flex-direction: column;
+        padding: 28px 28px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tab-btn span:last-child {
+        display: none;
+    }
+
+    .tab-btn {
+        padding: 10px 14px;
+    }
+
+    .tab-btn__icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .tab-btn__icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .track-header {
+        padding: 24px 20px;
+    }
+
+    .track-hero-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .track-hero-icon svg { width: 26px; height: 26px; }
+
+    .track-header__name { font-size: 1.25rem; }
+
+    .track-body {
+        grid-template-columns: 1fr;
+    }
+
+    .track-card {
+        padding: 22px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-btn span:last-child {
+        display: none;
+    }
+}
