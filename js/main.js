@@ -47,4 +47,24 @@
     }, { threshold: 0.5 });
 
     document.querySelectorAll('.hero__count').forEach(el => countObserver.observe(el));
+
+    /* ---- FAQ Accordion ---- */
+    document.querySelectorAll('.faq__question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq__item');
+            const isOpen = item.classList.contains('faq__item--open');
+
+            document.querySelectorAll('.faq__item').forEach(el => {
+                el.classList.remove('faq__item--open');
+                el.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+                el.querySelector('.faq__answer').setAttribute('aria-hidden', 'true');
+            });
+
+            if (!isOpen) {
+                item.classList.add('faq__item--open');
+                btn.setAttribute('aria-expanded', 'true');
+                item.querySelector('.faq__answer').setAttribute('aria-hidden', 'false');
+            }
+        });
+    });
 })();
